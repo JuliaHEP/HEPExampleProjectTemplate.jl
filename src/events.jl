@@ -1,5 +1,3 @@
-# TODO: add check for energy momentum conservation
-
 """
     Event(
         electron_momentum,
@@ -79,7 +77,11 @@ end
 Event(d::Dict,weight) = Event(d["e-"],d["e+"],d["mu-"],d["mu+"],weight)
 
 # construct event from coordinates
-Event(E_in::Real,cos_theta::Real,phi::Real,weight::Real) = # FIXME: add me 
+function Event(E_in::Real,cos_theta::Real,phi::Real,weight::Real)
+    #
+    # FIXME: add me 
+    #
+end
 
 # easy access of element type
 Base.eltype(::Event{T}) where T = T

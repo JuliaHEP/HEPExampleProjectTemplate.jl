@@ -1,6 +1,9 @@
 
-# FIXME: implement this!
-@inline _rho(E,m) = 
+@inline function _rho(E,m) 
+    #
+    # FIXME: implement this!
+    #
+end
 
 """
     differential_cross_section(E_in::Real, cos_theta::Real)
