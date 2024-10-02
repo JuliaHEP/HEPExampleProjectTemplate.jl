@@ -132,7 +132,7 @@ Computes the Minkowski dot product of two four-momentum vectors. The dot product
 Minkowski metric `(+,-,-,-)`. For ``p_i = (E_i,p_i^x,p_i^y,p_i^z)`` with ``i=1,2``, the result is:
 
 ```math
-    p_1 \\cdot p_2 = E_1E_2 - p_1^xp_2^x - p_1^yp_2^y + p_1^zp_2^z
+    p_1 \\cdot p_2 = E_1E_2 - p_1^xp_2^x - p_1^yp_2^y - p_1^zp_2^z
 ```
 
 # Example
@@ -166,6 +166,10 @@ end
 Constructs the four-momenta for an electron-positron annihilation process ``e^+ e^- \\rightarrow \\mu^+ \\mu^-``
 in the center-of-mass frame. The input energy (`E_in`), scattering angle (`cos_theta`), and azimuthal angle (`phi`) 
 are used to compute the incoming and outgoing momenta for the particles.
+
+Assumes the ``e^+ e^-`` collision is colinear with the `z`-axis, and then rotates the ``\\mu^+\\mu^-`` components relative to them.
+The 3-momentum magnitude is given by `rho`, for a given particle mass and energy.
+The components in the ``x,y,z`` axes will be ``sin(theta) * cos(phi)``, ``sin(theta) * sin(phi)``, ``cos_theta`` respectively.
 
 # Returns
 A `Dict` mapping the particle names ("e-", "e+", "mu-", "mu+") to their respective `FourMomentum` objects.

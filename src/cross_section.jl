@@ -21,7 +21,7 @@ scattering angle (`cos_theta`), i.e. the angle between the incoming electron and
 This function computes the differential cross section using the following formula (from Schwartz 2014):
 
 ```math
-\\frac{\\mathrm{d}\\sigma}{\\mathrm{d}\\Omega} = \\frac{\\alpha^2}{16 E_{\\mathrm{in}}^6}\\left( E_{\\text{in}}^4 + \\rho_e^2 \\rho_\\mu^2 \\cos^2\\theta + E_{\\text{in}}^2 \\left( m_e^2 + m_\\mu^2 \\right) \\right)
+\\frac{\\mathrm{d}\\sigma}{\\mathrm{d}\\Omega} = \\frac{\\rho_\\mu}{\\rho_e} \\cdot \\frac{\\alpha^2}{16 E_{\\mathrm{in}}^6}\\left( E_{\\text{in}}^4 + \\rho_e^2 \\rho_\\mu^2 \\cos^2\\theta + E_{\\text{in}}^2 \\left( m_e^2 + m_\\mu^2 \\right) \\right)
 ```
 
 where:
@@ -89,6 +89,3 @@ function total_cross_section(E_in)
     # FIXME: fill me in
     #
 end
-
-
-
